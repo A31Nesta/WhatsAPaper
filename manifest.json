@@ -1,0 +1,20 @@
+{
+    "manifest_version": 3,
+    "name": "What's A Paper - WhatsApp Web Wallpaper",
+    "description": "Allows you to set custom wallpapers on WhatsApp Web",
+    "version": "2.0",
+    "permissions": ["storage", "unlimitedStorage"],
+    "content_scripts": [
+        {
+            "matches": ["https://web.whatsapp.com/*"],
+            "js": [
+                "browser-polyfill.min.js",
+                "whatsapaper.js"
+            ]
+        }
+    ],
+    "action": {
+        "default_popup": "browserAction/index.html",
+        "default_title": "What's A Paper"
+    }
+}

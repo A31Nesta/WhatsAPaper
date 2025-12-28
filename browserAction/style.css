@@ -1,0 +1,134 @@
+/* Color palette */
+:root {
+    --wa-bg: #161717;
+    --wa-bg-panel: #1d1f1f;
+    --wa-selected: #2d2e2e;
+    --wa-input: #242626;
+    --wa-text-highlight: #fff;
+    --wa-text: #a1a2a2;
+    --wa-green: #21c063;
+    --wa-green-highlight: #D9FDD3;
+}
+
+/* Reset / Defaults */
+* {
+    font-family: sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    background-color: var(--wa-bg);
+    color: var(--wa-text);
+    
+    border: 2px solid var(--wa-bg-panel);
+    min-width: 360px;
+}
+
+p, label, li, button, input {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+/* Classes */
+.title, .subtitle {
+    text-align: center;
+}
+.title {
+    margin-top: 16px;
+    color: var(--wa-text-highlight);
+}
+.subtitle {
+    color: var(--wa-green);
+    margin-bottom: 16px;
+}
+
+.options {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 16px;
+}
+
+.panel {
+    background-color: var(--wa-bg-panel);
+    padding: 16px;
+    border-radius: 32px;
+}
+
+.or {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+
+    &> hr {
+        width: 100%;
+    }
+}
+
+.apply {
+    cursor: pointer;
+
+    display: block;
+    width: 100%;
+
+    /* border: 1px solid var(--wa-selected); */
+    border: none;
+    border-radius: 24px;
+    outline: none;
+    color: var(--wa-green);
+    background-color: var(--wa-bg);
+
+    margin-top: 12px;
+    padding: 8px;
+    font-size: 16px;
+
+    transition: color 0.125s;
+
+    &:hover {
+        color: var(--wa-green-highlight);
+    }
+}
+
+/* Custom input elements */
+label:has(input[type=file]) {
+    cursor: pointer;
+    display: block;
+
+    border-radius: 32px;
+    background-color: var(--wa-bg);
+
+    padding: 8px;
+    margin-top: 16px;
+
+    color: var(--wa-green);
+    text-align: center;
+
+    &:hover {
+        color: var(--wa-green-highlight);
+    }
+
+    &> input[type=file] {
+        display: none;
+    }
+}
+
+label[for=url-input] {
+    display: block;
+}
+input#url-input {
+    display: block;
+    margin-top: 16px;
+    width: 100%;
+
+    background-color: var(--wa-input);
+    border: none;
+    outline: none;
+    border-radius: 24px;
+    padding: 12px 16px;
+
+    font-size: 16px;
+    color: var(--wa-text-highlight);
+}

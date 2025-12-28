@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>What's A Paper</title>
+
+        <link rel="stylesheet" href="style.css" />
+
+        <script src="browser-polyfill.min.js"></script>
+        <script type="module" src="setWallpaper.js" defer></script>
+    </head>
+    <body>
+        <h1 class="title">What's A Paper</h1>
+        <p class="subtitle">Wallpaper utility for WhatsApp Web</p>
+
+        <div class="options">
+            <div class="panel">
+                <p>Drag and drop your new wallpaper!</p>
+
+                <label>
+                    Select and Apply
+                    <input id="image-input" type="file" accept="image/*" />
+                </label>
+                
+            </div>
+
+            <div class="or">
+                <hr>
+                <p>or</p>
+                <hr>
+            </div>
+
+            <div class="panel">
+                <label for="url-input">Enter an image URL:</label>
+                <input id="url-input" type="text" placeholder="Paste a URL here" />
+                <button class="apply" id="apply">Apply</button>
+            </div>
+        </div>
+
+        <!-- Debug stuff -->
+        <!-- <img id="selected-wpp" alt="Debug only, remove later"> -->
+    </body>
+</html>
